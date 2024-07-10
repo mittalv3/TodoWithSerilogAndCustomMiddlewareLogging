@@ -1,0 +1,145 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>Todo.API</name>
+    </assembly>
+    <members>
+        <member name="T:Todo.API.Controllers.AuthenticationController.AuthenticationRequestBody">
+            
+        </member>
+        <member name="P:Todo.API.Controllers.AuthenticationController.AuthenticationRequestBody.Username">
+            <summary>
+            Username to access the resource
+            </summary>
+        </member>
+        <member name="P:Todo.API.Controllers.AuthenticationController.AuthenticationRequestBody.Password">
+            <summary>
+            Password to access the resource
+            </summary>
+        </member>
+        <member name="M:Todo.API.Controllers.ToDoController.GetAllToDos">
+            <summary>
+            Get all the Todo's
+            </summary>
+            <returns>Returns all ToDos</returns>
+        </member>
+        <member name="M:Todo.API.Controllers.ToDoController.GetSingleTodo(System.Int32)">
+            <summary>
+            Get a single ToDo by ID
+            </summary>
+            <param name="id"></param>
+            <returns>Returns a single ToDo </returns>
+        </member>
+        <member name="M:Todo.API.Controllers.ToDoController.CreateToDo(Todo.API.Models.ToDoCreationDto)">
+            <summary>
+            Create a ToDo
+            </summary>
+            <param name="toDo"></param>
+            <returns>Returns the created ToDo</returns>
+        </member>
+        <member name="M:Todo.API.Controllers.ToDoController.UpdateToDo(System.Int32,Todo.API.Models.ToDoForUpdateDto)">
+            <summary>
+            Update ToDo
+            </summary>
+            <param name="id"></param>
+            <param name="toDo"></param>
+            <returns>Returns</returns>
+        </member>
+        <member name="M:Todo.API.Controllers.ToDoController.DeleteToDo(System.Int32)">
+            <summary>
+            Delete a ToDo
+            </summary>
+            <param name="id"></param>
+            <returns>NoContent on a successful delete</returns>
+        </member>
+        <member name="T:Todo.API.Migrations.ToDoInitialMigrations">
+            <inheritdoc />
+        </member>
+        <member name="M:Todo.API.Migrations.ToDoInitialMigrations.Up(Microsoft.EntityFrameworkCore.Migrations.MigrationBuilder)">
+            <inheritdoc />
+        </member>
+        <member name="M:Todo.API.Migrations.ToDoInitialMigrations.Down(Microsoft.EntityFrameworkCore.Migrations.MigrationBuilder)">
+            <inheritdoc />
+        </member>
+        <member name="M:Todo.API.Migrations.ToDoInitialMigrations.BuildTargetModel(Microsoft.EntityFrameworkCore.ModelBuilder)">
+            <inheritdoc />
+        </member>
+        <member name="T:Todo.API.Migrations.ToDoSeedingDataBase">
+            <inheritdoc />
+        </member>
+        <member name="M:Todo.API.Migrations.ToDoSeedingDataBase.Up(Microsoft.EntityFrameworkCore.Migrations.MigrationBuilder)">
+            <inheritdoc />
+        </member>
+        <member name="M:Todo.API.Migrations.ToDoSeedingDataBase.Down(Microsoft.EntityFrameworkCore.Migrations.MigrationBuilder)">
+            <inheritdoc />
+        </member>
+        <member name="M:Todo.API.Migrations.ToDoSeedingDataBase.BuildTargetModel(Microsoft.EntityFrameworkCore.ModelBuilder)">
+            <inheritdoc />
+        </member>
+        <member name="P:Todo.API.Models.ToDoCreationDto.Title">
+            <summary>
+            The Title of the ToDo. Its a mandatory field.
+            </summary>
+        </member>
+        <member name="P:Todo.API.Models.ToDoCreationDto.IsCompleted">
+            <summary>
+            Weather a ToDo is completed or not
+            </summary>
+        </member>
+        <member name="P:Todo.API.Models.ToDoCreationDto.DueDate">
+            <summary>
+            DueDate for the ToDo
+            </summary>
+        </member>
+        <member name="P:Todo.API.Models.ToDoCreationDto.Priority">
+            <summary>
+            Priority of the ToDo
+            </summary>
+        </member>
+        <member name="P:Todo.API.Models.ToDoDto.Id">
+            <summary>
+            The Id of the ToDo
+            </summary>
+        </member>
+        <member name="P:Todo.API.Models.ToDoDto.Title">
+            <summary>
+            The Title of the ToDo. Its a mandatory field.
+            </summary>
+        </member>
+        <member name="P:Todo.API.Models.ToDoDto.IsCompleted">
+            <summary>
+            Weather a ToDo is completed or not
+            </summary>
+        </member>
+        <member name="P:Todo.API.Models.ToDoDto.DueDate">
+            <summary>
+            DueDate for the ToDo
+            </summary>
+        </member>
+        <member name="P:Todo.API.Models.ToDoDto.Priority">
+            <summary>
+            Priority of the ToDo
+            </summary>
+        </member>
+        <member name="P:Todo.API.Models.ToDoForUpdateDto.Title">
+            <summary>
+            The Title of the ToDo. Its a mandatory field.
+            </summary>
+        </member>
+        <member name="P:Todo.API.Models.ToDoForUpdateDto.IsCompleted">
+            <summary>
+            Weather a ToDo is completed or not
+            </summary>
+        </member>
+        <member name="P:Todo.API.Models.ToDoForUpdateDto.DueDate">
+            <summary>
+            DueDate for the ToDo
+            </summary>
+        </member>
+        <member name="P:Todo.API.Models.ToDoForUpdateDto.Priority">
+            <summary>
+            Priority of the ToDo
+            </summary>
+        </member>
+    </members>
+</doc>
