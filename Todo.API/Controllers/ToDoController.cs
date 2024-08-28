@@ -35,7 +35,7 @@ namespace Todo.API.Controllers
         public async Task<ActionResult<IEnumerable<ToDoDto>>> GetAllToDos()
         {
             var toDosEntities = await _toDoRepository.GetToDosAsync();
-            _logger.LogInformation("Its Successful");
+            _logger.LogInformation("Its  Successful");
             return Ok(_mapper.Map<IEnumerable<ToDoDto>>(toDosEntities));
 
         }

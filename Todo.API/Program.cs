@@ -6,6 +6,7 @@ using System;
 using System.Reflection;
 using Todo.API.DbContexts;
 using Todo.API.Repository;
+using Serilog.Extension.Logging;
 
 Log.Logger = new LoggerConfiguration()
     .WriteTo.Console(
@@ -120,6 +121,10 @@ try
     app.UseAuthentication();
 
     app.UseAuthorization();
+
+    //Add Custom Middleware
+
+    app.UseSerilogLoggingMiddleware();
 
     app.MapControllers();
 
