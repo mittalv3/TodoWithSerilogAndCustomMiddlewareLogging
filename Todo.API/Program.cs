@@ -7,6 +7,7 @@ using System.Reflection;
 using Todo.API.DbContexts;
 using Todo.API.Repository;
 using Serilog.Extension.Logging;
+using Todo.API.Filter;
 
 Log.Logger = new LoggerConfiguration()
     .WriteTo.Console(
@@ -24,6 +25,32 @@ try
         loggerConfiguration.ReadFrom.Configuration(context.Configuration));
 
     // Add services to the container.
+
+    builder.Services.AddControllersWithViews(options =>
+    {
+        // Add multiple allowed IP addresses
+        var allowedIPs = new List<string> { "127.0.0.1", "::1" };
+        // 127.0.0.1 This is the loopback address for IPv4. It's a standard address that refers to the local machine itself.
+        // ::1 This is the IPv6 loopback address, equivalent to 127.0.0.1 in IPv4.
+        options.Filters.Add(new IPAddressResourceFilter(allowedIPs)); // Replace with the allowed IP address
+    });
+
+
+    builder.Services.AddControllersWithViews(options =>
+    {
+        options.Filters.Add<ExecutionTimeLoggerActionFilter>();
+    });
+
+    builder.Services.AddControllersWithViews(options =>
+    {
+        options.Filters.Add<CustomExceptionFilter>();
+    });
+
+    builder.Services.AddControllersWithViews(options =>
+    {
+        options.Filters.Add<CustomHeaderResultFilter>();
+    });
+
 
     builder.Services.AddProblemDetails();
 

@@ -1,6 +1,7 @@
 ﻿using AutoMapper;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
+using Todo.API.Filter;
 using Todo.API.Models;
 using Todo.API.Repository;
 
@@ -51,6 +52,7 @@ namespace Todo.API.Controllers
         [ProducesResponseType(StatusCodes.Status401Unauthorized)]
         [ProducesResponseType(StatusCodes.Status404NotFound)]
         [ProducesResponseType(StatusCodes.Status500InternalServerError)]
+        [AdminOnlyAuthorizationFilter]
         public async Task<ActionResult<ToDoDto>> GetSingleTodo(int id)
         {
             var toDoEntity = await _toDoRepository.GetSingleToDoAsync(id);
